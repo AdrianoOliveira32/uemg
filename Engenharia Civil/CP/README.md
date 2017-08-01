@@ -1,4 +1,4 @@
-# Estrutura de Dados 1
+# Computação e Programação
 
 -- DATAS IMPORTANTES
 P1 - 02/10
