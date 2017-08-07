@@ -1,8 +1,12 @@
 # Estrutura de Dados 1
 
 -- DATAS IMPORTANTES
-P1 - 02/10
-P2 - 30/11
+Trabalho 1 - 18/09
+P1 - 25/09
+
+Trabalho 2 - 20/11
+P2 - 27/11
+
 
 -- RECADOS
 
