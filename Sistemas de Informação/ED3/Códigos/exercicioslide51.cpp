@@ -89,57 +89,6 @@ celula *unir(celula *lista1, celula *lista2)
 	}
 	return lista3;
 
-
-}
-celula *RemoverCelula(celula *lista, int valor)
-{
-	celula *aux = lista; //ponteiro para percorrer a lista
-	celula *ant = NULL; // ponteiro para elem anterior
-	while (aux != NULL && aux->elemento != valor)
-	{
-		ant = aux;
-		aux = aux->proxima;
-	}
-	if (aux == NULL)
-	{
-		cout << "\nElemento nao encontrado.";
-		return lista; // retorna lista original
-	}
-	else if (ant == NULL)  //retira elemento do inicio
-	{
-		lista = aux->proxima;
-	}
-	else  //retira elem do meio ou do final da lista
-	{
-		ant->proxima = aux->proxima;
-	}
-	delete aux;
-	return lista;
-}
-
-
-celula *elimina(celula *lista)
-{
-	celula *aux = lista;
-	celula *aux2 = lista;
-	int n = 0;
-	while(aux)
-	{
-		aux2 = lista;
-		/*while(aux2)
-		{
-			if(aux != aux2 && aux->elemento == aux2->elemento)
-			{
-				n = aux2->elemento;
-				aux2 = aux->proxima; 
-				lista = RemoverCelula(lista, n);
-				}
-			aux2 = aux2->proxima;
-		}*/
-		aux = aux->proxima;
-		cout << ".";
-	}
-	return lista;
 }
 
 
@@ -149,13 +98,18 @@ int main()
 	celula *l1 = NULL;
 	l1 = InserirNoFim(l1, 20);
 	l1 = InserirNoFim(l1, 25);
-	l1 = InserirNoFim(l1, 25);
 	l1 = InserirNoFim(l1, 50);
 	l1 = InserirNoFim(l1, 2);
-	l1 = InserirNoFim(l1, 25);
 
-	l1 = elimina(l1);
-	ImprimirLista(l1);
+	celula *l2 = NULL;
+	l2 = InserirNoFim(l2, 11);
+	l2 = InserirNoFim(l2, 14);
+	l2 = InserirNoFim(l2, 15);
+	l2 = InserirNoFim(l2, 16);
+	l2 = InserirNoFim(l2, 17);
+	
+	celula *l3 = unir(l1, l2);
+	ImprimirLista(l3);
 
 	return 0;
 }
